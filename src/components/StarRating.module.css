@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+}
+
+.star {
+  color: #333;
+  transition: color 0.15s ease, transform 0.15s ease;
+  line-height: 0;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.star:not(.readonly):hover {
+  transform: scale(1.15);
+}
+
+.star:not(.readonly):active {
+  transform: scale(0.95);
+}
+
+.filled {
+  color: var(--star-active);
+}
+
+.readonly {
+  cursor: default;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  min-height: 1.2em;
+  transition: opacity 0.2s ease;
+}

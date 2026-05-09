@@ -1,0 +1,515 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 16px 40px;
+  background: var(--bg);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Header ──────────────────────────── */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 0 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.logoPlaceholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.businessName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  text-align: center;
+}
+
+.metaRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.metaIcon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #4285F4;
+}
+
+/* ── Divider ─────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 16px 0;
+}
+
+/* ── Google Prompt ───────────────────── */
+.googlePrompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.promptHeading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.googleBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.googleText {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.promptSub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ── Section ─────────────────────────── */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+/* ── Rating Phase ────────────────────── */
+.ratingPrompt {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ratingDisplay {
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Textarea ────────────────────────── */
+.textareaWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.textareaHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.textareaLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.aiBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.generatingBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  animation: pulse 1.2s ease infinite;
+}
+
+.textareaContainer {
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.textarea::placeholder {
+  color: var(--text-dim);
+}
+
+.textarea:focus {
+  border-color: var(--accent);
+}
+
+.textarea:disabled {
+  cursor: default;
+}
+
+.textareaLoading {
+  opacity: 0.5;
+  border-color: rgba(96, 165, 250, 0.3) !important;
+}
+
+.textareaSpinner {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  color: var(--accent);
+  pointer-events: none;
+}
+
+/* ── Connect Customer Form ───────────── */
+.connectHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  padding-bottom: 4px;
+}
+
+.connectIcon {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.connectTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.connectSub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactField {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contactInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 14px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  background: var(--surface-2);
+  transition: border-color 0.2s ease;
+}
+
+.contactInput:focus-within {
+  border-color: var(--accent);
+}
+
+.contactInput input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.contactInput input::placeholder {
+  color: var(--text-dim);
+}
+
+.contactIcon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.contactInputError {
+  border-color: #ef4444 !important;
+}
+
+.contactError {
+  font-size: 0.76rem;
+  color: #f87171;
+  padding-left: 4px;
+}
+
+.btnSuccess {
+  background: var(--success) !important;
+  opacity: 1 !important;
+  cursor: default !important;
+}
+
+/* ── Buttons ─────────────────────────── */
+.btnPrimary {
+  width: 100%;
+  padding: 15px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btnPrimary:hover:not(.btnDisabled) {
+  background: var(--accent-hover);
+}
+
+.btnPrimary:active:not(.btnDisabled) {
+  transform: scale(0.98);
+}
+
+
+.btnDisabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btnGhost {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-full);
+  background: transparent;
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btnGhost:hover {
+  border-color: #444;
+  color: var(--text);
+}
+
+.btnGoogle {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-full);
+  background: #fff;
+  color: #333;
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.btnGoogle:hover {
+  opacity: 0.9;
+}
+
+/* ── Hints / Errors ──────────────────── */
+.hintText {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: -6px;
+}
+
+.errorText {
+  font-size: 0.82rem;
+  color: #f87171;
+  text-align: center;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Spinner ─────────────────────────── */
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+/* ── Success Card ────────────────────── */
+.successCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.successIcon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.successTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.successSub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.reviewPreview {
+  width: 100%;
+  background: var(--surface-2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  text-align: left;
+}
+
+.reviewPreviewText {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(59, 130, 246, 0.1);
+  transition: background 0.2s ease;
+}
+
+.copyBtn:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+/* ── Social ──────────────────────────── */
+.socialRow {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.socialBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.socialBtn:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.justDialBtn {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: var(--radius-full);
+  background: var(--surface-2);
+  border: 1.5px solid var(--border);
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.justDialBtn:hover {
+  background: var(--surface-3);
+}
